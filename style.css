@@ -129,6 +129,6 @@ color: var(--blanco);
 
 .tachado{
     text-decoration: line-through;
-    color: var(--celeste)
+    color: var(--celeste);
 }
 

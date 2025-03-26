@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root{
+    
+    --blanco: aliceblue;
+    --lila: rgb(250, 130, 166);
+    --celeste: rgb(164, 228, 145);
+    --azul: rgb(250, 211, 104);
+    --verde: rgb(176, 140, 233);
+
+    --fuente: "Playfair Display", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom,var(--lila),var(--verde)) ;
+    height: 100vh;
+    font-family: var(--fuente);
+
+}
+
+.contenedor{
+    width: 400px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.fecha{
+color: var(--blanco);
+}
+
+.nombre{
+    color: var(--blanco);
+    margin-top: 25px;
+}
+
+.span{
+    color: var(--blanco);
+    letter-spacing: 1px;
+}
+
+.agregar-tarea{
+    background-color: var(--blanco);
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.input{
+    background-color: var(--blanco);
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    color: var(--lila);
+    padding: 10px;
+}
+
+
+
+.icono-input{
+    font-size: 50px;
+    color: var(--lila);
+}
+
+.icono-input:hover{
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.input::placeholder{
+    font-size: 16px;
+    padding: 10px;
+    color:var(--lila)  
+}
+
+
+.titulo-lista-de-tareas{
+    color: var(--blanco);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.estas-son{
+    background: linear-gradient(to bottom,var(--celeste),var(--verde)); 
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.check{
+    font-size: 25px;
+    color: var(--blanco);
+}
+
+.check:hover{
+    color: var(--celeste);
+    cursor: pointer;
+}
+
+
+.borrar{
+    font-size: 25px;
+    color: var(--blanco);
+}
+
+.borrar:hover{
+    color: var(--celeste);
+    cursor: pointer;
+}
+
+.tarea{
+    font-size: 18px;
+    color: var(--blanco);
+}
+
+.tachado{
+    text-decoration: line-through;
+    color: var(--celeste)
+}
