@@ -2,7 +2,7 @@
 
 :root{
     
-    --blanco: aliceblue;
+    --blanco: rgb(255, 255, 255);
     --lila: rgb(250, 130, 166);
     --celeste: rgb(164, 228, 145);
     --azul: rgb(250, 211, 104);
@@ -36,7 +36,7 @@ color: var(--blanco);
 
 .nombre{
     color: var(--blanco);
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .span{

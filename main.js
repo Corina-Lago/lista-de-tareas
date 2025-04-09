@@ -31,3 +31,24 @@ input.value = "";
 }
 
 )
+
+
+document.addEventListener("keyup", (e) => {
+    if(e.key == 'Enter') {
+        const tarea = input.value 
+
+
+        if(tarea) {
+            agregartarea(tarea)
+        }
+        
+        input.value = "";    
+    }
+}
+)
+
+const cambiarEstilos = () => {
+    const link = document.getElementById("estilo");
+    link.href = link.href.includes("style.css") ? "style2.css" : "style.css";
+};
+
