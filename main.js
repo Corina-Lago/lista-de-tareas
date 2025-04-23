@@ -1,3 +1,5 @@
+const fecha = document.getElementById("fecha");
+
 const input = document.getElementById("input");
 
 console.log(input);
@@ -11,18 +13,28 @@ const hecho = "fa-check-circle";
  
 const pendiente = "fa-circle";
 
-const tachado = "tachado";
+const tachado = "tachado"; 
+
+let id = 0;
+
+const fechaActual = new Date();
+fecha.innerHTML = fechaActual.toLocaleDateString("es-AR", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+});
 
 
 
 
-const agregartarea = (tarea, check) => {
+const agregartarea = (tarea, check, eliminado, id) => {
+    if(eliminado) {return}
     const estado = check ? hecho : pendiente;
     const tachar = check ? tachado : "";
-    const elemento = `<li class="estas-son" id="estas-son">
-                <i class="far ${estado} check" id="check" data="check"></i>
-                <p class="tarea ${tachar}" id="tarea">${tarea}</p>
-                <i class="fas fa-trash de borrar" id="borrar" data="borrar"></i>
+    const elemento = `<li class="estas-son">
+                <i class="far ${estado} check" id="check${id}" data="check"></i>
+                <p class="tarea ${tachar}">${tarea}</p>
+                <i class="fas fa-trash de borrar" id="borrar${id}" data="borrar"></i>
             </li>`
     
     lista.insertAdjacentHTML("beforeend",elemento);
@@ -56,7 +68,8 @@ const tarea = input.value
 
 
 if(tarea) {
-    agregartarea(tarea)
+    agregartarea(tarea, false, false, id);
+    id++
 }
 
 input.value = ""; 
@@ -72,7 +85,7 @@ document.addEventListener("keyup", (e) => {
 
 
         if(tarea) {
-            agregartarea(tarea)
+            agregartarea(tarea, false, false, id);
         }
         
         input.value = "";    
@@ -83,7 +96,7 @@ document.addEventListener("keyup", (e) => {
 
 lista.addEventListener("click", function (event) {
   const element = event.target;
-  const elementData = element.atributes.data.value;
+  const elementData = element.attributes.data.value;
 
   if (elementData == "check") {
     tareaRealizada (element)

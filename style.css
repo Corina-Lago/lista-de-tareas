@@ -30,6 +30,12 @@ body{
     max-width: 80%;
 }
 
+.corazon{
+    margin-top: 25px;
+    font-size: 25px;
+    color: var(--blanco);
+}
+
 .fecha{
 color: var(--blanco);
 }
