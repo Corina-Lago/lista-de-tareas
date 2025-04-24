@@ -31,19 +31,19 @@ body{
 }
 
 .corazon{
-    margin-top: 25px;
+    margin-top: 40px;
     font-size: 25px;
     color: var(--blanco);
 }
 
 .fecha{
-    margin-top: 30px;
+    margin-top: 5px;
     color: var(--blanco);
 }
 
 .nombre{
     color: var(--blanco);
-    margin-top: 35px;
+    margin-top: 50px;
 }
 
 .span{
