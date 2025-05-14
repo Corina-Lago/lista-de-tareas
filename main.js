@@ -86,6 +86,7 @@ if(tarea) {
     eliminado:false,
     id:id
     });
+    localStorage.setItem("GUARDADO",JSON.stringify(LIST));
     id++
 }
 
@@ -113,6 +114,8 @@ document.addEventListener("keyup", (e) => {
                 eliminado:false,
                 id:id
                 });
+                localStorage.setItem("GUARDADO",JSON.stringify(LIST));
+                id++;
         }
         
         input.value = "";    
@@ -132,9 +135,24 @@ lista.addEventListener("click", function (event) {
 else if (elementData == "borrar") {
     tareaEliminada(element)
 }
+localStorage.setItem("GUARDADO",JSON.stringify(LIST));
 
 }
 )
 
+let data = localStorage.getItem("GUARDADO");
+if(data){
+    LIST = JSON.parse(data);
+    console.log(LIST);
+    id = LIST.length;
+    cargarLista(LIST);
+} else {
+    LIST = [];
+    id = 0;
+}
 
-
+function cargarLista(array){
+    array.forEach(function(item){
+agregarTarea(item.tarea,item.check,item.eliminado,item.id);
+    });
+}
