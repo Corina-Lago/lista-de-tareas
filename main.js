@@ -153,6 +153,6 @@ if(data){
 
 function cargarLista(array){
     array.forEach(function(item){
-agregarTarea(item.tarea,item.check,item.eliminado,item.id);
+    agregartarea(item.tarea,item.check,item.eliminado,item.id)
     });
 }
